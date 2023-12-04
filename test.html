@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <link rel="stylesheet" href="test.css" />
+  <body>
+    <div id="wrapper">
+      <div class="container">
+        <div class="to-do">
+          <div class="topHead">
+            <h2 id="head">To-Do List</h2>
+            <img src="images/icon.png" alt="" id="iconImg" />
+          </div>
+          <div class="userInput">
+            <form>
+              <input
+                type="text"
+                id="enterTask"
+                name="enterTask"
+                placeholder="Add your task"
+              />
+              <input type="submit" value="Add" id="submitBtn" />
+            </form>
+          </div>
+          <div class="List-container" id="listCon">
+            <input
+              type="checkbox"
+              class="tick"
+              id="task1"
+              name="task1"
+              value="new task"
+            />
+            <label class="taskContent" id="task1" for="task1"
+              >Complete javascript projects</label
+            ><br />
+            <input
+              type="checkbox"
+              class="tick"
+              id="task2"
+              name="task2"
+              value="new task"
+            />
+            <label class="taskContent" for="task2"
+              >Complete javascript projects</label
+            ><br />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="test.js"></script>
+  </body>
+</html>

@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "League Spartan", sans-serif;
+}
+
+#wrapper {
+  width: 100vw;
+  height: 100vh;
+  background: rgb(165 165 165 / 57%);
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; */
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: yellow;
+}
+
+.to-do {
+  background: aqua;
+  padding: 15px;
+  border-radius: 20px;
+  margin: 20px;
+  width: 550px;
+  max-width: 90%;
+}
+.topHead {
+  display: flex;
+  align-items: center;
+}
+h2 {
+  font-size: 35px;
+}
+img#iconImg {
+  height: 60px;
+  width: 60px;
+}
+
+.userInput {
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+input#enterTask {
+  background: lightgray;
+  color: black;
+  padding: 18px;
+  border: none;
+  border-radius: 20px;
+  width: 100%;
+  outline: none;
+  font-size: 16px;
+}
+
+input#submitBtn {
+  border: none;
+  outline: none;
+  padding: 18px 35px;
+  background: blueviolet;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 40px;
+  position: absolute;
+  right: -7px;
+}
+
+label.checked {
+  text-decoration: line-through;
+}

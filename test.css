@@ -10,7 +10,9 @@
 #wrapper {
   width: 100vw;
   height: 100vh;
-  background: rgb(165 165 165 / 57%);
+  background: url("https://images.saymedia-content.com/.image/t_share/MTkzOTUzODU0MDkyODc5MzY1/particlesjs-examples.gif");
+  background-size: cover;
+  background-repeat: no-repeat;
   /* display: flex;
   flex-direction: column;
   align-items: center;
@@ -21,12 +23,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: yellow;
+  /* background-color: yellow; */
 }
 
 .to-do {
-  background: aqua;
-  padding: 15px;
+  background: white;
+  padding: 20px;
   border-radius: 20px;
   margin: 20px;
   width: 550px;
@@ -35,13 +37,16 @@
 .topHead {
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 h2 {
   font-size: 35px;
+  font-family: Nova Square;
+  color: #6d1aba;
 }
 img#iconImg {
-  height: 60px;
-  width: 60px;
+  height: 50px;
+  width: 50px;
 }
 
 .userInput {
@@ -68,9 +73,9 @@ input#enterTask {
 input#submitBtn {
   border: none;
   outline: none;
-  padding: 18px 35px;
-  background: blueviolet;
-  font-size: 16px;
+  padding: 16px 35px;
+  background: #9648fe;
+  font-size: 19px;
   color: white;
   cursor: pointer;
   border-radius: 40px;
@@ -89,13 +94,28 @@ input.checked {
 .task-item {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding: 5px;
 }
 span {
   cursor: pointer;
+  font-size: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+span:hover {
+  scale: 1.3;
+  color: red;
+  rotate: 360deg;
+}
+
+div#listCon {
+  padding: 15px;
 }
 
 .taskContent {
   margin-left: 8px;
+  font-family: Mulish;
 }
 
 /*.task-item {
@@ -112,42 +132,3 @@ span {
 }*/
 
 /********************CUSTOM CHECKBOX********/
-input[type="checkbox"] {
-  /* Add if not using autoprefixer */
-  -webkit-appearance: none;
-  appearance: none;
-  /* For iOS < 15 to remove gradient background */
-  background-color: #fff;
-  /* Not removed via appearance */
-  margin: 0;
-}
-
-input[type="checkbox"] {
-  appearance: none;
-  background-color: #fff;
-  margin: 0;
-  font: inherit;
-  color: currentColor;
-  width: 1.15em;
-  height: 1.15em;
-  border: 0.15em solid currentColor;
-  border-radius: 0.15em;
-  transform: translateY(-0.075em);
-  display: grid;
-  place-content: center;
-}
-
-input[type="checkbox"]::before {
-  content: "";
-  width: 0.65em;
-  height: 0.65em;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--form-control-color);
-}
-
-input[type="checkbox"]:checked::before {
-  transform: scale(1);
-  transform-origin: bottom left;
-  clip-path: polygon(14% 44%, 0 65%, 50% 100%, 100% 16%, 80% 0%, 43% 62%);
-}

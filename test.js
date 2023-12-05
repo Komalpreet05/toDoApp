@@ -65,6 +65,7 @@ function addTask(e) {
         //next line
         // listContainer.appendChild(nextLine);
         inputTask.value = '';
+        saveData();
     }
 }
 submitBtn.addEventListener("click", addTask);
@@ -77,15 +78,24 @@ listContainer.addEventListener('click', e => {
         //e.target.labels.classList.add("checked");
         console.log(e.target.labels[0]);
         e.target.labels[0].classList.toggle("checked");
-
+        saveData();
         // saveData();
     }
     else if (e.target.tagName === 'SPAN') {
         e.target.parentElement.remove();
-
+        saveData();
     }
 
 });
+
+function saveData() {
+    localStorage.setItem("data", listContainer.innerHTML);
+}
+
+function showData() {
+    listContainer.innerHTML = localStorage.getItem("data");
+}
+showData();
 
 
 

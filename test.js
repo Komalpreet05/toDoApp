@@ -3,7 +3,7 @@ const submitBtn = document.getElementById("submitBtn");
 const listContainer = document.getElementById("listCon");
 const heading = document.getElementById("head");
 const labels = document.getElementsByTagName("label");
-let taskCount = 0;
+let taskCount = localStorage.getItem("count") + 1;
 
 
 
@@ -28,6 +28,7 @@ function addTask(e) {
 
         //adding taskcount
         let x = taskCount++;
+        localStorage.setItem("count", x);
         //creating label
         let task = document.createElement("label");
         task.setAttribute("for", x);
